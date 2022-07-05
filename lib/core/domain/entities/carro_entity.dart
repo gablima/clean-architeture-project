@@ -19,7 +19,3 @@ class CarroEntity {
     return modelo = "ferrari";
   }
 }
-
-/// TODO: repository and datasource
-/// TODO: tests domain
-///

@@ -9,6 +9,7 @@ class CarroDto extends CarroEntity {
       : super(cor: cores, modelo: modeloDoCarro, placa: placaDoCarro);
 
   Map toJson() {
+    //serializacao
     return {
       'modeloDoCarro': modeloDoCarro,
       'placaDoCarro': placaDoCarro,
@@ -16,7 +17,8 @@ class CarroDto extends CarroEntity {
     };
   }
 
-  CarroDto fromMap(Map map) {
+  static CarroDto fromJson(Map map) {
+    //deserializacao
     return CarroDto(cores: map['cores'], modeloDoCarro: map['modeloDoCarro'], placaDoCarro: map['placaDoCarro']);
   }
 }
